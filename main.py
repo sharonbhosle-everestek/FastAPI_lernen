@@ -32,7 +32,7 @@ def view():
 
 # example of path parameter 
 @app.get('/patient/{patient_id}')
-def patient(patient_id : str = Path(..., description="Please enter the patient ID you are looking for ", example="P001")):
+def patient(patient_id : str = Path(..., description="Please enter the patient ID you are looking for ", examples="P001")):
     data = load_all()
 
     if patient_id in data:
