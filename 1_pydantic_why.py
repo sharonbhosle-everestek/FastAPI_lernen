@@ -14,7 +14,7 @@ class Patient(BaseModel):
 
     
     @field_validator("email")
-    @classmethod
+    @classmethod #classmethod means we can call it on the class itself not on the object e.g Patient.check_email()
     def check_email(cls, val):
         valid_domain = ["hdfc.com", "icici.com"]
 
@@ -34,6 +34,8 @@ class Patient(BaseModel):
         if not (0 < age < 100) : 
             raise ValueError("age is unrealistic")
         return age
+    
+    # field validators apne aap call ho jaate hain jab model ka object banta hai, just like model validators, so no need to call them explicitly. constructor mein bhi call nahi karna padta. ye constructor ke andar hi call ho jaate hain.
     
 
 def print_something(obj : Patient):
