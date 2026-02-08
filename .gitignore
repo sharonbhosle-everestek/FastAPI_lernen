@@ -208,7 +208,7 @@ __marimo__/
 
 
 # Virtual environments
-fastAPI_env/
+fastAPI_venv/
 venv/
 .env/
 

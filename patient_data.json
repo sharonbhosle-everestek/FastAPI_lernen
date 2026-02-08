@@ -1,1 +1,9 @@
-{"name":"John Doe","age":30,"address":{"city":"Mumbai","state":"Maharashtra","pincode":"400001"}}
+{
+    "name": "John Doe",
+    "age": 30,
+    "address": {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400001"
+    }
+}
