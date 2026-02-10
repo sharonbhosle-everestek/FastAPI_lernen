@@ -145,3 +145,13 @@ def delete_patient(patient_id: str):
 
     # return response
     return JSONResponse(status_code=200, content={'message': f'patient {patient_id} deleted succesfully'})
+
+from fastapi import Request
+@app.get("/req")
+def get_request_packet(req: Request):
+    return JSONResponse(status_code=200, 
+                        content= {
+                            "reuest": f"{req}",
+                            "req.base_url": f"{req.url}",
+                            "req._url": f"{req._url}",
+                        })
