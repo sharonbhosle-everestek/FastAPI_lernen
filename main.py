@@ -154,4 +154,5 @@ def get_request_packet(req: Request):
                             "reuest": f"{req}",
                             "req.base_url": f"{req.url}",
                             "req._url": f"{req._url}",
+                            "req.headers.get(Authorizartion)": req.headers.get("user-agent")
                         })
