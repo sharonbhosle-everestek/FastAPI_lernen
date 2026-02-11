@@ -8,7 +8,6 @@ from schema.pydantic_model import Patient, Patient_update, Patient_create
 app = FastAPI()
 
 
-
 def load_all():
     with open("patients.json", 'r') as f:
         data = json.load(f)
