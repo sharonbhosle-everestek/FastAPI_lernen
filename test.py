@@ -1,4 +1,9 @@
-print(type(KeyError("Something to write here")).__name__)
+class Alpha:
+    one = 1
+    two = 2
 
-obj = TypeError(["something in array"])
-print(type(obj.args), obj.args)
+alp = Alpha()
+
+
+print(getattr(alp, "three", "default values"))
+print(getattr(alp, "two", "default values"))
