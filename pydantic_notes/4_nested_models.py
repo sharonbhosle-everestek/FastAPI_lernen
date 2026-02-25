@@ -25,6 +25,14 @@ my_patient = {
 address = Address(**my_address)
 p1 = Patient(**my_patient)
 
+try:
+    new_data = Patient.parse_raw(**my_patient)
+except Exception as e:
+    print("Found Error: ", e)
+finally:
+    print("Program ended ")
+
+
 print(p1.address.city)
 print(p1.name)
 print(address.state)
